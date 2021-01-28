@@ -1,3 +1,13 @@
+body{
+  overflow-x: scroll;
+}
+@media (min-width:480px)  { 
+  .daysButton{
+    width:100%;
+    height: 100%;
+  }
+  
+}
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -56,9 +66,13 @@ button:focus, button:active {
   font-size: larger; 
   font-weight: bold;
 }
+
 .daysButton{
-  width:90%;height: 100%;margin: 0 auto
+  width:90%;
+  height: 100%;
+  margin: 0 auto;
 }
+
 .lecToolbar
 {
   margin: 0 auto;
