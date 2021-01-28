@@ -101,7 +101,7 @@ export class AppComponent {
      }
     organizationalBehaviour()
     {
-      window.open("https://meet.google.com/mic-thsc-qzo?pli=1&authuser=1", "_blank");  
+      window.open(" https://meet.google.com/zzc-pnpt-dvo", "_blank");  
     }
     visualAnthropology()
     {
@@ -215,6 +215,13 @@ export class AppComponent {
       window.open("https://www.google.com", "_blank"); 
     }
 //labs
+
+
+ introToRoboLab()
+ {
+  window.open("http://meet.google.com/esy-cyhz-kwo?authuser=2&hs=179", "_blank"); 
+}
+
     SoftwareEnginneringLab()
     {
       window.open("https://daiict.webex.com/daiict/j.php?MTID=m6d8e7d603f16bee2d0f2ef2a32850fea", "_blank"); 
