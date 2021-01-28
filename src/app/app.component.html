@@ -1,0 +1,576 @@
+<div>
+  <div class="container1">
+    <mat-toolbar color="primary">
+      <span>WeekDays</span>
+    </mat-toolbar>
+    
+    <div class="daysList">
+      <button (click) ="mondayToggle()" mat-raised-button style="font-size: large; font-weight: bold;" >Monday</button>
+      <mat-divider></mat-divider>
+      <button  (click) ="tuesdayToggle()" mat-raised-button  style="font-size: large; font-weight: bold;">Tuesday</button>
+      <mat-divider></mat-divider>
+      <button mat-raised-button  (click) ="wednesdayToggle()" style="font-size: large; font-weight: bold;">Wednesday</button>
+      <mat-divider></mat-divider>
+      <button mat-raised-button  (click) ="thrusdayToggle()" style="font-size: large; font-weight: bold;" >Thrusday</button>
+      <mat-divider></mat-divider>
+      <button mat-raised-button  (click) ="fridayToggle()" style="font-size: large; font-weight: bold;" >Friday</button>
+      <mat-divider></mat-divider>
+      <button mat-raised-button  (click) ="saturdayToggle()" style="font-size: large; font-weight: bold;" >Saturday</button>
+      <mat-divider></mat-divider>
+      <button mat-raised-button  (click) ="sundayToggle()" style="font-size: large; font-weight: bold;">Sunday</button>
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+  <div class="container2">
+   <!-- Monday -->
+    <div *ngIf="monday" style="width:90%;height: 100%;margin: 0 auto" >
+        
+          <mat-toolbar color="primary">
+            <span style="margin: 0 auto">Monday Lectures</span>
+          </mat-toolbar>
+
+          <div style="height: 100%;">
+            <mat-card style=" display:flex;">
+                <div style="width: 25%; border-right: 1px solid grey;">
+                   <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+                 </div>
+              
+                <div style="width: 75%;">
+                  <mat-list style="padding-left: 100px;">
+                      <mat-list-item (click) ="introToQuantamMechanics();" matRipple> Introduction to Quantum Mechanics (Sec A)</mat-list-item>
+                      <mat-list-item  (click) ="introToCrypto();"  matRipple>Introductin to Cryptography</mat-list-item>
+                      <mat-list-item  (click) ="EinsteinPhysics();" matRipple>Einstein's Physics (Sorry , Sir give new link for every lecture)</mat-list-item>
+                  </mat-list>
+                </div>
+            </mat-card>
+            
+            <mat-card style=" display:flex;">
+              <div style="width: 25%; border-right: 1px solid grey;">
+                 <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+               </div>
+            
+              <div style="width: 75%;">
+                <mat-list style="padding-left: 100px;">
+                    <mat-list-item (click) ="CulturePoliticsIdentity();" matRipple> Culture, Politics, Identity</mat-list-item>
+                    <mat-list-item  (click) ="visualAnthropology();"  matRipple> Visual Anthropology</mat-list-item>
+                    <mat-list-item  (click) ="southAsia();" matRipple>Publics in South Asia: Contemporary Perspectives</mat-list-item>
+                    <mat-list-item  (click) ="organizationalBehaviour();" matRipple>Organisational Behaviour</mat-list-item>
+                  </mat-list>
+              </div>
+          </mat-card>
+        
+          <mat-card style=" display:flex;">
+            <div style="width: 25%; border-right: 1px solid grey;">
+               <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+             </div>
+          
+            <div style="width: 75%;">
+              <mat-list style="padding-left: 100px;">
+                  <mat-list-item (click) ="SatelitteCommunication();" matRipple>Satelitte Communication</mat-list-item>
+                  <mat-list-item  (click) ="MachineLearning();"  matRipple>Machine Learning</mat-list-item>
+                  <mat-list-item  (click) ="noSql();" matRipple>No SQL Databases</mat-list-item>
+                  <mat-list-item  (click) ="ModelsofComputation();" matRipple>Models of Computation</mat-list-item>
+                  <mat-list-item  (click) ="ComputerGraphics();" matRipple>Computer Graphics</mat-list-item>
+                </mat-list>
+            </div>
+        </mat-card>
+        
+        <mat-toolbar color="primary"  style="margin-top:10px;">
+          <span style="margin: 0 auto">Monday Labs</span>
+        </mat-toolbar>
+        <mat-card style=" display:flex;">
+          <div style="width: 25%; border-right: 1px solid grey;">
+             <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+           </div>
+        
+          <div style="width: 75%;">
+            <mat-list style="padding-left: 100px;">
+            
+              <mat-list-item>
+                <div class="dropup">
+                 <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Modeling and Simulation
+                                 </span>
+                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                   <a class="dropdown-item" href="#">Group 1</a>
+                   <a class="dropdown-item" href="#">Group 2</a>
+                   <a class="dropdown-item" href="#">Group 3</a>
+                 </div>
+               </div>
+             </mat-list-item>
+
+
+              </mat-list>
+          </div>
+      </mat-card>
+
+
+      </div>
+   </div>
+
+<!-- Monday -->
+
+<!-- Tuesday -->
+<div *ngIf="tuesday" style="width:90%;height: 100%;margin: 0 auto" >
+        
+  <mat-toolbar color="primary">
+    <span style="margin: 0 auto">Tuesday Lectures</span>
+  </mat-toolbar>
+
+  <div style="height: 100%;">
+    <mat-card style=" display:flex;">
+        <div style="width: 25%; border-right: 1px solid grey;">
+           <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+         </div>
+      
+        <div style="width: 75%;">
+          <mat-list style="padding-left: 100px;">
+              <mat-list-item (click) ="se();" matRipple> Software Engineering</mat-list-item>
+          </mat-list>
+        </div>
+    </mat-card>
+    
+    <mat-card style=" display:flex;">
+      <div style="width: 25%; border-right: 1px solid grey;">
+         <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+       </div>
+    
+      <div style="width: 75%;">
+        <mat-list style="padding-left: 100px;">
+            <mat-list-item (click) ="ModelingandSimulation();" matRipple>Modeling and Simulation</mat-list-item>
+         
+          </mat-list>
+      </div>
+  </mat-card>
+  <mat-card style=" display:flex;">
+    <div style="width: 25%; border-right: 1px solid grey;">
+       <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+     </div>
+  
+    <div style="width: 75%;">
+      <mat-list style="padding-left: 100px;">
+          <mat-list-item (click) ="DataAnalysisandVisualization();" matRipple>Data Analysis and Visualization</mat-list-item>
+          <mat-list-item  (click) ="DigitalSignalProcessing();"  matRipple> Digital Signal Processing</mat-list-item>
+          <mat-list-item  (click) ="SpeechTechnology();" matRipple>Speech Technology</mat-list-item>
+          <mat-list-item  (click) ="InternetofThings();" matRipple>Internet of Things</mat-list-item>
+          <mat-list-item  (click) ="introToRobo();" matRipple> Introduction to Robotics</mat-list-item>
+          <mat-list-item  (click) ="CMOSAnalogICDesign();" matRipple> CMOS Analog IC Design </mat-list-item>
+          
+        </mat-list>
+    </div> 
+  </mat-card>
+ 
+  <mat-toolbar color="primary" style="margin-top:10px;">
+
+    <span style="margin: 0 auto">Tuesday Labs</span>
+  </mat-toolbar>
+  <mat-card style=" display:flex;">
+    <div style="width: 25%; border-right: 1px solid grey;">
+       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+     </div>
+  
+    <div style="width: 75%;">
+      <mat-list style="padding-left: 100px;">
+       
+        <mat-list-item>
+         <div class="dropup">
+          <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Operating System
+          </span>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Group 1</a>
+            <a class="dropdown-item" href="#">Group 2</a>
+            <a class="dropdown-item" href="#">Group 3</a>
+          </div>
+        </div>
+      </mat-list-item>
+       
+      <mat-list-item>
+        <div class="dropup">
+         <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Computational Finance
+         </span>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Group 1</a>
+          <a class="dropdown-item" href="#">Group 2</a>
+          <a class="dropdown-item" href="#">Group 3</a>
+         </div>
+       </div>
+     </mat-list-item>
+      </mat-list>
+    </div>
+</mat-card>
+
+
+ </div>
+</div>
+<!-- Tuesday -->
+
+<!-- Wednesday -->
+<div *ngIf="wednesday" style="width:90%;height: 100%;margin: 0 auto" >
+        
+  <mat-toolbar color="primary">
+    <span style="margin: 0 auto">Wednesday Lectures</span>
+  </mat-toolbar>
+
+  <div style="height: 100%;">
+    <mat-card style=" display:flex;">
+        <div style="width: 25%; border-right: 1px solid grey;">
+           <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+         </div>
+      
+        <div style="width: 75%;">
+          <mat-list style="padding-left: 100px;">
+              <mat-list-item (click) ="SatelitteCommunication();" matRipple>Satelitte Communication</mat-list-item>
+              <mat-list-item  (click) ="MachineLearning();"  matRipple>Machine Learning</mat-list-item>
+              <mat-list-item  (click) ="noSql();" matRipple>No SQL Databases</mat-list-item>
+              <mat-list-item  (click) ="ModelsofComputation();" matRipple>Models of Computation</mat-list-item>
+              <mat-list-item  (click) ="ComputerGraphics();" matRipple>Computer Graphics</mat-list-item>
+
+          </mat-list>
+        </div>
+    </mat-card>
+    
+    <mat-card style=" display:flex;">
+      <div style="width: 25%; border-right: 1px solid grey;">
+         <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+       </div>
+    
+      <div style="width: 75%;">
+        <mat-list style="padding-left: 100px;">
+            <mat-list-item (click) ="ComputationalFinance();" matRipple> Computational Finance</mat-list-item>
+            <mat-list-item  (click) ="RFEngineering();"  matRipple>RF Engineering</mat-list-item>
+            <mat-list-item  (click) ="AdaptiveSignalProcessing();" matRipple>Adaptive Signal Processing</mat-list-item>
+            <mat-list-item  (click) ="os();" matRipple> Operating System</mat-list-item>
+            <mat-list-item  (click) ="LogicforComputerScience();" matRipple> Logic for Computer Science</mat-list-item>
+          </mat-list>
+      </div>
+  </mat-card>
+  <mat-card style=" display:flex;">
+    <div style="width: 25%; border-right: 1px solid grey;">
+       <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+     </div>
+  
+    <div style="width: 75%;">
+      <mat-list style="padding-left: 100px;">
+          <mat-list-item (click) ="HighPerformanceComputing();" matRipple>High Performance Computing</mat-list-item>
+        
+        </mat-list>
+    </div> 
+  </mat-card>
+
+  <mat-toolbar color="primary"  style="margin-top:10px;">
+    <span style="margin: 0 auto">Wednesday Labs</span>
+  </mat-toolbar>
+  <mat-card style=" display:flex;">
+    <div style="width: 25%; border-right: 1px solid grey;">
+       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+     </div>
+  
+    <div style="width: 75%;">
+      <mat-list style="padding-left: 100px;">
+       
+        <mat-list-item>
+          <div class="dropup">
+           <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            High Performance Computing
+           </span>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+             <a class="dropdown-item" href="#">Group 1</a>
+             <a class="dropdown-item" href="#">Group 2</a>
+             <a class="dropdown-item" href="#">Group 3</a>
+           </div>
+         </div>
+       </mat-list-item>
+
+      </mat-list>
+    </div>
+</mat-card>
+
+
+ </div>
+</div>
+<!-- wednesday -->
+ <!-- Thrusday -->
+<div *ngIf="thrusday" style="width:90%;height: 100%;margin: 0 auto" >
+        
+  <mat-toolbar color="primary">
+    <span style="margin: 0 auto">Thrusday Lectures</span>
+  </mat-toolbar>
+
+  <div style="height: 100%;">
+    <mat-card style=" display:flex;">
+        <div style="width: 25%; border-right: 1px solid grey;">
+           <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+         </div>
+      
+        <div style="width: 75%;">
+          <mat-list style="padding-left: 100px;">
+              <mat-list-item (click) ="se();" matRipple>Software Engineering</mat-list-item>
+              <mat-list-item  (click) ="ModelingandSimulation();"  matRipple>Modeling and Simulation</mat-list-item>
+             
+          </mat-list>
+        </div>
+    </mat-card>
+    
+    <mat-card style=" display:flex;">
+      <div style="width: 25%; border-right: 1px solid grey;">
+         <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+       </div>
+    
+      <div style="width: 75%;">
+        <mat-list style="padding-left: 100px;">
+            <mat-list-item (click) ="introToQuantamMechanics();" matRipple> Introduction to Quantum Mechanics</mat-list-item>
+            <mat-list-item  (click) ="introToCrypto();"  matRipple> Introduction to Cryptography</mat-list-item>
+            <mat-list-item  (click) ="EinsteinPhysics();" matRipple>Einstein's Physic</mat-list-item>
+          </mat-list>
+      </div>
+  </mat-card>
+  <mat-card style=" display:flex;">
+    <div style="width: 25%; border-right: 1px solid grey;">
+       <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+     </div>
+  
+    <div style="width: 75%;">
+      <mat-list style="padding-left: 100px;">
+        <mat-list-item (click) ="CulturePoliticsIdentity();" matRipple> Culture, Politics, Identity</mat-list-item>
+        <mat-list-item  (click) ="visualAnthropology();"  matRipple> Visual Anthropology</mat-list-item>
+        <mat-list-item  (click) ="southAsia();" matRipple>Publics in South Asia: Contemporary Perspectives</mat-list-item>
+        <mat-list-item  (click) ="organizationalBehaviour();" matRipple>Organisational Behaviour</mat-list-item>
+
+        </mat-list>
+    </div> 
+  </mat-card>
+
+  <mat-toolbar color="primary"  style="margin-top:10px;">
+    <span style="margin: 0 auto">Thrusday Labs</span>
+  </mat-toolbar>
+  <mat-card style=" display:flex;">
+    <div style="width: 25%; border-right: 1px solid grey;">
+       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+     </div>
+  
+    <div style="width: 75%;">
+      <mat-list style="padding-left: 100px;">
+
+
+        <mat-list-item>
+          <div class="dropup">
+           <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Data Analysis and Visualization
+           </span>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+             <a class="dropdown-item" href="#">Group 1</a>
+             <a class="dropdown-item" href="#">Group 2</a>
+             <a class="dropdown-item" href="#">Group 3</a>
+           </div>
+         </div>
+       </mat-list-item>
+
+
+       <mat-list-item>
+        <div class="dropup">
+         <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Digital Signal Processing
+         </span>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#">Group 1</a>
+           <a class="dropdown-item" href="#">Group 2</a>
+           <a class="dropdown-item" href="#">Group 3</a>
+         </div>
+       </div>
+     </mat-list-item>
+
+     <mat-list-item>
+      <div class="dropup">
+       <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        CMOS Analog IC Design
+       </span>
+       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+         <a class="dropdown-item" href="#">Group 1</a>
+         <a class="dropdown-item" href="#">Group 2</a>
+         <a class="dropdown-item" href="#">Group 3</a>
+       </div>
+     </div>
+   </mat-list-item>
+
+   <mat-list-item>
+    <div class="dropup">
+     <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Internet of Things
+     </span>
+     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+       <a class="dropdown-item" href="#">Group 1</a>
+       <a class="dropdown-item" href="#">Group 2</a>
+       <a class="dropdown-item" href="#">Group 3</a>
+     </div>
+   </div>
+ </mat-list-item>
+
+
+ <mat-list-item>
+  <div class="dropup">
+   <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Introduction to Robotics
+   </span>
+   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a class="dropdown-item" href="#">Group 1</a>
+     <a class="dropdown-item" href="#">Group 2</a>
+     <a class="dropdown-item" href="#">Group 3</a>
+   </div>
+ </div>
+</mat-list-item>
+       </mat-list>
+    </div>
+</mat-card>
+
+
+ </div>
+</div>
+<!-- Thrusday -->
+ 
+ <!-- Friday -->
+<div *ngIf="friday" style="width:90%;height: 100%;margin: 0 auto" >
+        
+  <mat-toolbar color="primary">
+    <span style="margin: 0 auto">Friday Lectures</span>
+  </mat-toolbar>
+
+  <div style="height: 100%;">
+    <mat-card style=" display:flex;">
+        <div style="width: 25%; border-right: 1px solid grey;">
+           <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+         </div>
+      
+        <div style="width: 75%;">
+          <mat-list style="padding-left: 100px;">
+            <mat-list-item (click) ="DataAnalysisandVisualization();" matRipple>Data Analysis and Visualization</mat-list-item>
+            <mat-list-item  (click) ="DigitalSignalProcessing();"  matRipple> Digital Signal Processing</mat-list-item>
+            <mat-list-item  (click) ="SpeechTechnology();" matRipple>Speech Technology</mat-list-item>
+            <mat-list-item  (click) ="InternetofThings();" matRipple>Internet of Things</mat-list-item>
+            <mat-list-item  (click) ="introToRobo();" matRipple> Introduction to Robotics</mat-list-item>
+            <mat-list-item  (click) ="CMOSAnalogICDesign();" matRipple> CMOS Analog IC Design </mat-list-item>
+          
+          </mat-list>
+        </div>
+    </mat-card>
+    
+    <mat-card style=" display:flex;">
+      <div style="width: 25%; border-right: 1px solid grey;">
+         <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+       </div>
+    
+      <div style="width: 75%;">
+        <mat-list style="padding-left: 100px;">
+            <mat-list-item (click) ="HighPerformanceComputing();" matRipple>High Performance Computing</mat-list-item>
+          
+          </mat-list>
+      </div>
+  </mat-card>
+  <mat-card style=" display:flex;">
+    <div style="width: 25%; border-right: 1px solid grey;">
+       <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+     </div>
+  
+    <div style="width: 75%;">
+      <mat-list style="padding-left: 100px;">
+        <mat-list-item (click) ="ComputationalFinance();" matRipple> Computational Finance</mat-list-item>
+            <mat-list-item  (click) ="RFEngineering();"  matRipple>RF Engineering</mat-list-item>
+            <mat-list-item  (click) ="AdaptiveSignalProcessing();" matRipple>Adaptive Signal Processing</mat-list-item>
+            <mat-list-item  (click) ="os();" matRipple> Operating System</mat-list-item>
+            <mat-list-item  (click) ="LogicforComputerScience();" matRipple> Logic for Computer Science</mat-list-item> 
+      </mat-list>
+    </div> 
+  </mat-card>
+
+  <mat-toolbar color="primary"  style="margin-top:10px;">
+    <span style="margin: 0 auto">Friday Labs</span>
+  </mat-toolbar>
+  <mat-card style=" display:flex;">
+    <div style="width: 25%; border-right: 1px solid grey;">
+       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+     </div>
+  
+    <div style="width: 75%;">
+      <mat-list style="padding-left: 100px;">
+
+        <mat-list-item (click) = "noSqlLab()" matRipple>
+           No SQL Databases
+            </mat-list-item>
+
+        <mat-list-item (click) = "ComputerGraphicsLab()" matRipple>
+            Computer Graphics
+           </mat-list-item>
+
+        <mat-list-item matRipple (click) = "MachineLearningLab()">
+            Machine Learning
+        </mat-list-item>
+        
+           </mat-list>
+    </div>
+</mat-card>
+
+
+ </div>
+</div>
+<!-- Friday -->
+
+ <!-- Saturday -->
+<div *ngIf="saturday" style="width:90%;height: 100%;margin: 0 auto" >
+  
+  <mat-toolbar color="primary">
+    <span style="margin: 0 auto">Saturday Labs</span>
+  </mat-toolbar>
+
+  <mat-card style=" display:flex;">
+    <div style="width: 25%; border-right: 1px solid grey;">
+       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+     </div>
+  
+    <div style="width: 75%;">
+      <mat-list style="padding-left: 100px;">
+        <mat-list-item matRipple (click) = "SoftwareEnginneringLab()">
+          <div class="dropup">
+           <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Software Enginnering (Sir)
+          </span>
+         </div>
+        </mat-list-item>
+
+        <mat-list-item>
+          
+          <div class="dropup">
+           <span class=" btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" matRipple>Software Enginnering(TA)
+           </span>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+             
+             <a class="dropdown-item" target="_blank" href="https://meet.google.com/vuj-hmxe-ojc">Group 1, 2, 3, 4, 5, 6, 30</a>
+             <a class="dropdown-item" target="_blank" href="https://meet.google.com/gjr-tytd-tvg">Group 7, 8, 9, 10, 11, 31, 32</a>
+             <a class="dropdown-item" target="_blank" href="https://meet.google.com/mcm-xmjd-wdm">Group 12, 13, 14, 15, 16, 17</a>
+             <a class="dropdown-item" target="_blank" href="https://meet.google.com/pqf-kfkg-rjo">Group 18, 19, 20, 21, 22, 23</a>
+             <a class="dropdown-item" target="_blank" href="https://meet.google.com/xxk-udfi-xor">Group 24, 25, 26, 27, 28, 29</a>
+             
+
+           </div>
+         </div>
+        </mat-list-item>
+
+
+      </mat-list>
+    </div>
+</mat-card>
+
+
+</div>
+<!-- Saturday -->
+ <!-- sunday -->
+
+ <div *ngIf="sunday" style="width:90%;height: 100%;margin: 0 auto" >
+        
+ 
+ <img src= "./assets/Images/s1.png" alt="">
+</div>
+<!-- sunday -->
+
+ </div>
+</div>
