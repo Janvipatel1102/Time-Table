@@ -1,42 +1,42 @@
 <div>
   <div class="container1">
     <mat-toolbar color="primary">
-      <span style="font-size: larger; font-weight: bold;" >Days</span>
+      <span class="daysToolBar" >Days</span>
     </mat-toolbar>
     
     <div class="daysList">
-      <button (click) ="mondayToggle()" mat-raised-button style="font-size: large; font-weight: bold;" >Monday</button>
+      <button class="days" (click) ="mondayToggle()" mat-raised-button >Monday</button>
       <mat-divider></mat-divider>
-      <button  (click) ="tuesdayToggle()" mat-raised-button  style="font-size: large; font-weight: bold;">Tuesday</button>
+      <button class="days" (click) ="tuesdayToggle()" mat-raised-button >Tuesday</button>
       <mat-divider></mat-divider>
-      <button mat-raised-button  (click) ="wednesdayToggle()" style="font-size: large; font-weight: bold;">Wednesday</button>
+      <button class="days" mat-raised-button  (click) ="wednesdayToggle()">Wednesday</button>
       <mat-divider></mat-divider>
-      <button mat-raised-button  (click) ="thrusdayToggle()" style="font-size: large; font-weight: bold;" >Thrusday</button>
+      <button class="days" mat-raised-button  (click) ="thrusdayToggle()" >Thrusday</button>
       <mat-divider></mat-divider>
-      <button mat-raised-button  (click) ="fridayToggle()" style="font-size: large; font-weight: bold;" >Friday</button>
+      <button mat-raised-button class="days"  (click) ="fridayToggle()" >Friday</button>
       <mat-divider></mat-divider>
-      <button mat-raised-button  (click) ="saturdayToggle()" style="font-size: large; font-weight: bold;" >Saturday</button>
+      <button class="days" mat-raised-button  (click) ="saturdayToggle()"  >Saturday</button>
       <mat-divider></mat-divider>
-      <button mat-raised-button  (click) ="sundayToggle()" style="font-size: large; font-weight: bold;">Sunday</button>
+      <button class="days" mat-raised-button  (click) ="sundayToggle()">Sunday</button>
       <mat-divider></mat-divider>
     </div>
   </div>
   <div class="container2">
    <!-- Monday -->
-    <div *ngIf="monday" style="width:90%;height: 100%;margin: 0 auto" >
+    <div *ngIf="monday" class="daysButton" >
         
           <mat-toolbar color="primary">
-            <span style="margin: 0 auto">Monday Lectures</span>
+            <span class="lecToolbar">Monday Lectures</span>
           </mat-toolbar>
 
-          <div style="height: 100%;">
-            <mat-card style=" display:flex;">
-                <div style="width: 25%; border-right: 1px solid grey;">
-                   <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+          <div class="lectures">
+            <mat-card class="matCard">
+                <div class="timeDiv1">
+                   <div class="timeDiv2">8:30 - 9:45</div>
                  </div>
               
-                <div style="width: 75%;">
-                  <mat-list style="padding-left: 100px;">
+                <div class = "lecDiv">
+                  <mat-list class="lecMatList">
                       <mat-list-item (click) ="introToQuantamMechanics();" matRipple> Introduction to Quantum Mechanics (Sec A)</mat-list-item>
                       <mat-list-item  (click) ="introToCrypto();"  matRipple>Introductin to Cryptography</mat-list-item>
                       <mat-list-item  (click) ="EinsteinPhysics();" matRipple>Einstein's Physics (Sorry , Sir give new link for every lecture)</mat-list-item>
@@ -44,13 +44,13 @@
                 </div>
             </mat-card>
             
-            <mat-card style=" display:flex;">
-              <div style="width: 25%; border-right: 1px solid grey;">
-                 <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+            <mat-card class="matCard">
+              <div class="timeDiv1">
+                 <div class="timeDiv2">10:15 - 11:30</div>
                </div>
             
-              <div style="width: 75%;">
-                <mat-list style="padding-left: 100px;">
+              <div class = "lecDiv">
+                <mat-list class="lecMatList">
                     <mat-list-item (click) ="CulturePoliticsIdentity();" matRipple> Culture, Politics, Identity</mat-list-item>
                     <mat-list-item  (click) ="visualAnthropology();"  matRipple> Visual Anthropology</mat-list-item>
                     <mat-list-item  (click) ="southAsia();" matRipple>Publics in South Asia: Contemporary Perspectives</mat-list-item>
@@ -59,13 +59,13 @@
               </div>
           </mat-card>
         
-          <mat-card style=" display:flex;">
-            <div style="width: 25%; border-right: 1px solid grey;">
-               <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+          <mat-card class="matCard">
+            <div class="timeDiv1">
+               <div class="timeDiv2">12:00 - 13:15</div>
              </div>
           
-            <div style="width: 75%;">
-              <mat-list style="padding-left: 100px;">
+            <div class = "lecDiv">
+              <mat-list class="lecMatList">
                   <mat-list-item (click) ="SatelitteCommunication();" matRipple>Satelitte Communication</mat-list-item>
                   <mat-list-item  (click) ="MachineLearning();"  matRipple>Machine Learning</mat-list-item>
                   <mat-list-item  (click) ="noSql();" matRipple>No SQL Databases</mat-list-item>
@@ -75,16 +75,16 @@
             </div>
         </mat-card>
         
-        <mat-toolbar color="primary"  style="margin-top:10px;">
-          <span style="margin: 0 auto">Monday Labs</span>
+        <mat-toolbar color="primary"  class = "labToolbar" >
+          <span class="lecToolbar" >Monday Labs</span>
         </mat-toolbar>
-        <mat-card style=" display:flex;">
-          <div style="width: 25%; border-right: 1px solid grey;">
-             <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+        <mat-card class="matCard">
+          <div class="timeDiv1" >
+             <div class="timeDiv2">2:00 - 4:00</div>
            </div>
         
-          <div style="width: 75%;">
-            <mat-list style="padding-left: 100px;">
+          <div class = "lecDiv">
+            <mat-list class="lecMatList">
             
               <mat-list-item>
                 <div class="dropup">
@@ -113,44 +113,44 @@
 <!-- Monday -->
 
 <!-- Tuesday -->
-<div *ngIf="tuesday" style="width:90%;height: 100%;margin: 0 auto" >
+<div *ngIf="tuesday" class="daysButton" >
         
   <mat-toolbar color="primary">
-    <span style="margin: 0 auto">Tuesday Lectures</span>
+    <span class="lecToolbar" >Tuesday Lectures</span>
   </mat-toolbar>
 
-  <div style="height: 100%;">
-    <mat-card style=" display:flex;">
-        <div style="width: 25%; border-right: 1px solid grey;">
-           <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+  <div class="lectures">
+    <mat-card class="matCard">
+        <div class="timeDiv1" >
+           <div class="timeDiv2">8:30 - 9:45</div>
          </div>
       
-        <div style="width: 75%;">
-          <mat-list style="padding-left: 100px;">
+        <div class = "lecDiv">
+          <mat-list class="lecMatList">
               <mat-list-item (click) ="se();" matRipple> Software Engineering</mat-list-item>
           </mat-list>
         </div>
     </mat-card>
     
-    <mat-card style=" display:flex;">
-      <div style="width: 25%; border-right: 1px solid grey;">
-         <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+    <mat-card class="matCard">
+      <div class="timeDiv1">
+         <div class="timeDiv2">10:15 - 11:30</div>
        </div>
     
-      <div style="width: 75%;">
-        <mat-list style="padding-left: 100px;">
+      <div class = "lecDiv">
+        <mat-list class="lecMatList">
             <mat-list-item (click) ="ModelingandSimulation();" matRipple>Modeling and Simulation</mat-list-item>
          
           </mat-list>
       </div>
   </mat-card>
-  <mat-card style=" display:flex;">
-    <div style="width: 25%; border-right: 1px solid grey;">
-       <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+  <mat-card class="matCard">
+    <div class="timeDiv1">
+       <div class="timeDiv2">12:00 - 13:15</div>
      </div>
   
-    <div style="width: 75%;">
-      <mat-list style="padding-left: 100px;">
+    <div class = "lecDiv">
+      <mat-list class="lecMatList">
           <mat-list-item (click) ="DataAnalysisandVisualization();" matRipple>Data Analysis and Visualization</mat-list-item>
           <mat-list-item  (click) ="DigitalSignalProcessing();"  matRipple> Digital Signal Processing</mat-list-item>
           <mat-list-item  (click) ="SpeechTechnology();" matRipple>Speech Technology</mat-list-item>
@@ -162,17 +162,17 @@
     </div> 
   </mat-card>
  
-  <mat-toolbar color="primary" style="margin-top:10px;">
+  <mat-toolbar color="primary" class = "labToolbar">
 
-    <span style="margin: 0 auto">Tuesday Labs</span>
+    <span class="lecToolbar" >Tuesday Labs</span>
   </mat-toolbar>
-  <mat-card style=" display:flex;">
-    <div style="width: 25%; border-right: 1px solid grey;">
-       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+  <mat-card class="matCard">
+    <div class="timeDiv1">
+       <div class="timeDiv2">2:00 - 4:00</div>
      </div>
   
-    <div style="width: 75%;">
-      <mat-list style="padding-left: 100px;">
+    <div class = "lecDiv">
+      <mat-list class="lecMatList">
        
         <mat-list-item>
          <div class="dropup">
@@ -213,20 +213,20 @@
 <!-- Tuesday -->
 
 <!-- Wednesday -->
-<div *ngIf="wednesday" style="width:90%;height: 100%;margin: 0 auto" >
+<div *ngIf="wednesday" class="daysButton"  >
         
   <mat-toolbar color="primary">
-    <span style="margin: 0 auto">Wednesday Lectures</span>
+    <span class="lecToolbar" >Wednesday Lectures</span>
   </mat-toolbar>
 
-  <div style="height: 100%;">
-    <mat-card style=" display:flex;">
-        <div style="width: 25%; border-right: 1px solid grey;">
-           <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+  <div  class="lectures">
+    <mat-card class="matCard">
+        <div class="timeDiv1">
+           <div class="timeDiv2">8:30 - 9:45</div>
          </div>
       
-        <div style="width: 75%;">
-          <mat-list style="padding-left: 100px;">
+        <div class = "lecDiv">
+          <mat-list class="lecMatList">
               <mat-list-item (click) ="SatelitteCommunication();" matRipple>Satelitte Communication</mat-list-item>
               <mat-list-item  (click) ="MachineLearning();"  matRipple>Machine Learning</mat-list-item>
               <mat-list-item  (click) ="noSql();" matRipple>No SQL Databases</mat-list-item>
@@ -237,13 +237,13 @@
         </div>
     </mat-card>
     
-    <mat-card style=" display:flex;">
-      <div style="width: 25%; border-right: 1px solid grey;">
-         <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+    <mat-card class="matCard">
+      <div class="timeDiv1">
+         <div class="timeDiv2">10:15 - 11:30</div>
        </div>
     
-      <div style="width: 75%;">
-        <mat-list style="padding-left: 100px;">
+      <div class = "lecDiv">
+        <mat-list class="lecMatList">
             <mat-list-item (click) ="ComputationalFinance();" matRipple> Computational Finance</mat-list-item>
             <mat-list-item  (click) ="RFEngineering();"  matRipple>RF Engineering</mat-list-item>
             <mat-list-item  (click) ="AdaptiveSignalProcessing();" matRipple>Adaptive Signal Processing</mat-list-item>
@@ -252,29 +252,29 @@
           </mat-list>
       </div>
   </mat-card>
-  <mat-card style=" display:flex;">
-    <div style="width: 25%; border-right: 1px solid grey;">
-       <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+  <mat-card class="matCard">
+    <div class="timeDiv1">
+       <div class="timeDiv2">12:00 - 13:15</div>
      </div>
   
-    <div style="width: 75%;">
-      <mat-list style="padding-left: 100px;">
+    <div class = "lecDiv">
+      <mat-list class="lecMatList">
           <mat-list-item (click) ="HighPerformanceComputing();" matRipple>High Performance Computing</mat-list-item>
         
         </mat-list>
     </div> 
   </mat-card>
 
-  <mat-toolbar color="primary"  style="margin-top:10px;">
-    <span style="margin: 0 auto">Wednesday Labs</span>
+  <mat-toolbar color="primary"  class = "labToolbar">
+    <span class="lecToolbar">Wednesday Labs</span>
   </mat-toolbar>
-  <mat-card style=" display:flex;">
-    <div style="width: 25%; border-right: 1px solid grey;">
-       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+  <mat-card class="matCard">
+    <div class="timeDiv1">
+       <div class="timeDiv2">2:00 - 4:00</div>
      </div>
   
-    <div style="width: 75%;">
-      <mat-list style="padding-left: 100px;">
+    <div class = "lecDiv">
+      <mat-list class="lecMatList">
        
         <mat-list-item>
           <div class="dropup">
@@ -300,20 +300,20 @@
 </div>
 <!-- wednesday -->
  <!-- Thrusday -->
-<div *ngIf="thrusday" style="width:90%;height: 100%;margin: 0 auto" >
+<div *ngIf="thrusday" class="daysButton"  >
         
   <mat-toolbar color="primary">
-    <span style="margin: 0 auto">Thrusday Lectures</span>
+    <span  class="lecToolbar">Thrusday Lectures</span>
   </mat-toolbar>
 
-  <div style="height: 100%;">
-    <mat-card style=" display:flex;">
-        <div style="width: 25%; border-right: 1px solid grey;">
-           <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+  <div class="lectures" >
+    <mat-card class="matCard">
+        <div class="timeDiv1">
+           <div class="timeDiv2">8:30 - 9:45</div>
          </div>
       
-        <div style="width: 75%;">
-          <mat-list style="padding-left: 100px;">
+        <div class = "lecDiv">
+          <mat-list class="lecMatList">
               <mat-list-item (click) ="se();" matRipple>Software Engineering</mat-list-item>
               <mat-list-item  (click) ="ModelingandSimulation();"  matRipple>Modeling and Simulation</mat-list-item>
              
@@ -321,26 +321,26 @@
         </div>
     </mat-card>
     
-    <mat-card style=" display:flex;">
-      <div style="width: 25%; border-right: 1px solid grey;">
-         <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+    <mat-card class="matCard">
+      <div class="timeDiv1">
+         <div class="timeDiv2">10:15 - 11:30</div>
        </div>
     
-      <div style="width: 75%;">
-        <mat-list style="padding-left: 100px;">
+      <div class = "lecDiv">
+        <mat-list class="lecMatList">
             <mat-list-item (click) ="introToQuantamMechanics();" matRipple> Introduction to Quantum Mechanics</mat-list-item>
             <mat-list-item  (click) ="introToCrypto();"  matRipple> Introduction to Cryptography</mat-list-item>
             <mat-list-item  (click) ="EinsteinPhysics();" matRipple>Einstein's Physic</mat-list-item>
           </mat-list>
       </div>
   </mat-card>
-  <mat-card style=" display:flex;">
-    <div style="width: 25%; border-right: 1px solid grey;">
-       <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+  <mat-card class="matCard">
+    <div class="timeDiv1">
+       <div class="timeDiv2">12:00 - 13:15</div>
      </div>
   
-    <div style="width: 75%;">
-      <mat-list style="padding-left: 100px;">
+    <div class = "lecDiv">
+      <mat-list class="lecMatList">
         <mat-list-item (click) ="CulturePoliticsIdentity();" matRipple> Culture, Politics, Identity</mat-list-item>
         <mat-list-item  (click) ="visualAnthropology();"  matRipple> Visual Anthropology</mat-list-item>
         <mat-list-item  (click) ="southAsia();" matRipple>Publics in South Asia: Contemporary Perspectives</mat-list-item>
@@ -350,16 +350,16 @@
     </div> 
   </mat-card>
 
-  <mat-toolbar color="primary"  style="margin-top:10px;">
-    <span style="margin: 0 auto">Thrusday Labs</span>
+  <mat-toolbar color="primary"  class = "labToolbar">
+    <span class="lecToolbar">Thrusday Labs</span>
   </mat-toolbar>
-  <mat-card style=" display:flex;">
-    <div style="width: 25%; border-right: 1px solid grey;">
-       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+  <mat-card class="matCard">
+    <div class="timeDiv1">
+       <div class="timeDiv2">2:00 - 4:00</div>
      </div>
   
-    <div style="width: 75%;">
-      <mat-list style="padding-left: 100px;">
+    <div class = "lecDiv">
+      <mat-list class="lecMatList">
 
 
         <mat-list-item>
@@ -424,7 +424,7 @@
  </mat-list-item>
 
 
- <mat-list-item (click)="introToRoboLab()" matRipple>
+ <mat-list-item class="daysButton" (click)="introToRoboLab()" matRipple>
   <div class="dropup">
    <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Introduction to Robotics
@@ -442,20 +442,20 @@
 <!-- Thrusday -->
  
  <!-- Friday -->
-<div *ngIf="friday" style="width:90%;height: 100%;margin: 0 auto" >
+<div *ngIf="friday" class="daysButton"  >
         
   <mat-toolbar color="primary">
-    <span style="margin: 0 auto">Friday Lectures</span>
+    <span  class="lecToolbar">Friday Lectures</span>
   </mat-toolbar>
 
-  <div style="height: 100%;">
-    <mat-card style=" display:flex;">
-        <div style="width: 25%; border-right: 1px solid grey;">
-           <div style="text-align: center; padding: 70px 0;">8:30 - 9:45</div>
+  <div class="lectures">
+    <mat-card class="matCard">
+        <div class="timeDiv1">
+           <div class="timeDiv2">8:30 - 9:45</div>
          </div>
       
-        <div style="width: 75%;">
-          <mat-list style="padding-left: 100px;">
+        <div class = "lecDiv">
+          <mat-list class="lecMatList">
             <mat-list-item (click) ="DataAnalysisandVisualization();" matRipple>Data Analysis and Visualization</mat-list-item>
             <mat-list-item  (click) ="DigitalSignalProcessing();"  matRipple> Digital Signal Processing</mat-list-item>
             <mat-list-item  (click) ="SpeechTechnology();" matRipple>Speech Technology</mat-list-item>
@@ -467,25 +467,25 @@
         </div>
     </mat-card>
     
-    <mat-card style=" display:flex;">
-      <div style="width: 25%; border-right: 1px solid grey;">
-         <div style="text-align: center; padding: 70px 0;">10:15 - 11:30</div>
+    <mat-card class="matCard">
+      <div class="timeDiv1">
+         <div class="timeDiv2">10:15 - 11:30</div>
        </div>
     
-      <div style="width: 75%;">
-        <mat-list style="padding-left: 100px;">
+      <div class = "lecDiv">
+        <mat-list class="lecMatList">
             <mat-list-item (click) ="HighPerformanceComputing();" matRipple>High Performance Computing</mat-list-item>
           
           </mat-list>
       </div>
   </mat-card>
-  <mat-card style=" display:flex;">
-    <div style="width: 25%; border-right: 1px solid grey;">
-       <div style="text-align: center; padding: 70px 0;">12:00 - 13:15</div>
+  <mat-card class="matCard">
+    <div class="timeDiv1">
+       <div class="timeDiv2">12:00 - 13:15</div>
      </div>
   
-    <div style="width: 75%;">
-      <mat-list style="padding-left: 100px;">
+    <div class = "lecDiv">
+      <mat-list class="lecMatList">
         <mat-list-item (click) ="ComputationalFinance();" matRipple> Computational Finance</mat-list-item>
             <mat-list-item  (click) ="RFEngineering();"  matRipple>RF Engineering</mat-list-item>
             <mat-list-item  (click) ="AdaptiveSignalProcessing();" matRipple>Adaptive Signal Processing</mat-list-item>
@@ -495,16 +495,16 @@
     </div> 
   </mat-card>
 
-  <mat-toolbar color="primary"  style="margin-top:10px;">
-    <span style="margin: 0 auto">Friday Labs</span>
+  <mat-toolbar color="primary"  class = "labToolbar">
+    <span class="lecToolbar">Friday Labs</span>
   </mat-toolbar>
-  <mat-card style=" display:flex;">
-    <div style="width: 25%; border-right: 1px solid grey;">
-       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+  <mat-card class="matCard">
+    <div class="timeDiv1">
+       <div class="timeDiv2">2:00 - 4:00</div>
      </div>
   
-    <div style="width: 75%;">
-      <mat-list style="padding-left: 100px;">
+    <div class = "lecDiv">
+      <mat-list class="lecMatList">
 
         <mat-list-item (click) = "noSqlLab()" matRipple>
            No SQL Databases
@@ -528,19 +528,19 @@
 <!-- Friday -->
 
  <!-- Saturday -->
-<div *ngIf="saturday" style="width:90%;height: 100%;margin: 0 auto" >
+<div *ngIf="saturday" class="daysButton"  >
   
   <mat-toolbar color="primary">
-    <span style="margin: 0 auto">Saturday Labs</span>
+    <span  class="lecToolbar">Saturday Labs</span>
   </mat-toolbar>
 
-  <mat-card style=" display:flex;">
-    <div style="width: 25%; border-right: 1px solid grey;">
-       <div style="text-align: center; padding: 70px 0;">2:00 - 4:00</div>
+  <mat-card class="matCard">
+    <div class="timeDiv1">
+       <div class="timeDiv2">2:00 - 4:00</div>
      </div>
   
-    <div style="width: 75%;">
-      <mat-list style="padding-left: 100px;">
+    <div class = "lecDiv">
+      <mat-list class="lecMatList">
         <mat-list-item matRipple (click) = "SoftwareEnginneringLab()">
           <div class="dropup">
            <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -577,7 +577,7 @@
 <!-- Saturday -->
  <!-- sunday -->
 
- <div *ngIf="sunday" style="width:90%;height: 100%;margin: 0 auto" >
+ <div *ngIf="sunday" class="daysButton"  >
         
  
  <img src= "./assets/Images/s1.png" alt="">

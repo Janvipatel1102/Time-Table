@@ -47,3 +47,47 @@ button:focus, button:active {
   outline: none !important;
   box-shadow: none !important;
 }
+.days
+{
+  font-size: large; 
+  font-weight: bold;
+}
+.daysToolBar{
+  font-size: larger; 
+  font-weight: bold;
+}
+.daysButton{
+  width:90%;height: 100%;margin: 0 auto
+}
+.lecToolbar
+{
+  margin: 0 auto;
+}
+.lectures
+{
+  height: 100%;
+}
+.matCard
+{
+  display:flex;
+}
+.timeDiv1
+{
+  width: 25%; border-right: 1px solid grey;
+}
+.timeDiv2
+{
+  text-align: center; padding: 20% 0;
+}
+.lecDiv
+{
+  width: 75%;
+}
+
+.lecMatList{
+  padding-left: 20%;
+}
+.labToolbar
+{
+  margin-top:1%;
+}
