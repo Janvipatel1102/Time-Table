@@ -1,33 +1,107 @@
-body{
-  overflow-x: scroll;
-}
+
 @media (max-width:600px)  { 
-  .container1{
-    height: 100vh;
-    width: 20%;
+  
+  .container
+  {
+  
     margin: 0;
     padding: 0;
-    position: fixed;
-    float: left;
+    overflow: scroll;
+  
   }
-  .daysButton{
-    width:90%;
-    height: 100%;
+
+  .container1{
+    
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    
+  
   }
   .container2
-{
- 
-  float:right;
-  height: 100vh;
-  width:80%;
- 
-}
-
+  {
+    margin-top: 5%;
+    padding: 0;
+    overflow-y: scroll;
   
+  }
+  .daysToolBar{
+    font-size: large; 
+    font-weight: bold;
+    margin: 0 auto;
+  }
+  .days
+  {
+    font-size: small; 
+    font-weight: bold;
+    width: fit-content;
+    padding: 2%;
+
+  }
+  .daysList{
+   display: flex;
+    overflow: scroll;
+  }
+
+ .lecToolbar
+  {
+    margin: 0 auto;
+    font-size: large; 
+    font-weight: bold;
+  }
+  
+  .matCard
+  {
+    display:flex;
+    width: 100%;
+  }
+  .timeDiv1
+  {
+     width: 20%;
+     border-right: 1px solid grey;
+    
+  }
+  .timeDiv2
+  {
+     text-align: center;
+     padding: 5% 0;
+  }
+  .lecDiv
+  {
+    width: 80%;
+  }
+  
+  
+  .labToolbar
+  {
+    margin-top:1%;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+  }
+
+
+mat-toolbar
+{
+  margin: 0;
+  padding: 0;
+}
+  mat-list-item {
+    cursor: pointer;
+  }
+  .dropdown-toggle::after {
+    display:none;
+  }
+  button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }
 
 
-
+@media (min-width:600px)
+{
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -128,4 +202,5 @@ button:focus, button:active {
 img{
   height: 100%;
   width: 100%;
+}
 }
