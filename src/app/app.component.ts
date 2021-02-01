@@ -101,7 +101,7 @@ export class AppComponent {
      }
     organizationalBehaviour()
     {
-      window.open(" https://meet.google.com/zzc-pnpt-dvo", "_blank");  
+      window.open("https://meet.google.com/zic-oaae-gzz?authuser=0&pli=1", "_blank");  
     }
     visualAnthropology()
     {
