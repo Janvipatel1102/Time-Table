@@ -97,7 +97,7 @@ export class AppComponent {
 
     introToCrypto()
      {
-       window.open("https://meet.google.com/czt-reft-dqu", "_blank");   
+       window.open("https://meet.google.com/fgi-rdhc-jqk", "_blank");   
      }
     organizationalBehaviour()
     {
@@ -239,6 +239,19 @@ export class AppComponent {
     {
       window.open("https://meet.google.com/oby-uusn-ibx", "_blank"); 
     }
+   osLabGroup5()
+   {
+    window.open("https://meet.google.com/sid-vmbi-osm?authuser=0", "_blank");
+   }
+   osLabGroup4()
+   {
+    window.open("https://meet.google.com/dhn-caim-mjr?authuser=0", "_blank");
+   }
+   obThrusday()
+   {
+    window.open("https://meet.google.com/zzc-pnpt-dvo?hs=122&authuser=0", "_blank");
+   }
+
     mondayToggle()
     {
      this.monday =true;
